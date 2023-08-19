@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Calculator</title>
+
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Poppins", sans-serif;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  display: grid;
+  place-items: center;
+  background: #fff;
+}
+.calculator {
+  width: 330px;
+  background: #fea691;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+}
+form .result {
+  height: 60px;
+  width: 100%;
+  background: #fea691;
+  border-radius: 5px;
+  box-shadow: inset -3px -3px 7px #ffffff73,
+    inset 2px 2px 5px rgba(94, 104, 121, 0.288);
+}
+.result input {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  padding: 0 20px;
+  font-weight: 500;
+  text-align: right;
+  color: #fff;
+  pointer-events: none;
+}
+
+form .buttons {
+  text-align: center;
+  padding: 30px 0 0 0;
+}
+.buttons input[type="button"] {
+  height: 56px;
+  width: 56px;
+  font-size: 23px;
+  margin: 4px;
+  border: none;
+  outline: none;
+  background: #fea691;
+  border-radius: 5px;
+  box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+  transition: background 0.3s linear;
+}
+.buttons input[type="button"]:focus {
+  transform: scale(0.9);
+  box-shadow: inset -3px -3px 7px #ffffff73,
+    inset 2px 2px 5px rgba(94, 104, 121, 0.288);
+}
+.buttons input[type="button"]:hover {
+  cursor: pointer;
+  background: #ffd1c8c9;
+}
+</style>
+<body>
+    <div class="calculator">
+        <form action="#" name="form">
+            <div class="result">
+                <input type="text" name="disp" id="disp">
+            </div>
+            <div class="buttons">
+                <div class="row">
+                    <input type="button" value="7" name="v7" onclick="val(v7.value)">
+                    <input type="button" value="8" name="v8" onclick="val(v8.value)">
+                    <input type="button" value="9" name="v9" onclick="val(v9.value)">
+                    <input type="button" value="+" name="add" onclick="val(add.value)">
+                </div>
+                <div class="row">
+                    <input type="button" value="4" name="v4" onclick="val(v4.value)">
+                    <input type="button" value="5" name="v5" onclick="val(v5.value)">
+                    <input type="button" value="6" name="v6" onclick="val(v6.value)">
+                    <input type="button" value="-" name="sub" onclick="val(sub.value)">
+                </div>
+                <div class="row">
+                    <input type="button" value="1" name="v1" onclick="val(v1.value)">
+                    <input type="button" value="2" name="v2" onclick="val(v2.value)">
+                    <input type="button" value="3" name="v3" onclick="val(v3.value)">
+                    <input type="button" value="*" name="mul" onclick="val(mul.value)">
+                </div>
+                <div class="row">
+                    <input type="button" value="0" name="v0" onclick="val(v0.value)">
+                    <input type="button" value="." name="vdot" onclick="val(vdot.value)">
+                    <input type="button" value="/" name="vdiv" onclick="val(vdiv.value)">
+                    <input type="button" title="Click two times to clear result" value="=" name="veql" onclick="calculate()">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function val(result){
+            form.disp.value = form.disp.value + result;
+        }
+        
+        function calculate(){
+            if (form.disp.value == ""){
+                alert("Plase enter numbers");
+                // Đoạn này thông báo user nếu họ k nhập số
+                // Mà nhập dấu = thì sẽ xuất hiện thông báo
+            }
+            else {
+                form.disp.value = eval (form.disp.value);
+            }
+        }
+        var btn = form.veql;
+        btn.addEventListener('dblclick', function(){
+            form.disp.value = "";
+        })
+        // Do ban đầu mình k có nút Clear, nên mình tư duy theo dạng nếu User muốn Clear, thì họ sẽ phải bấm 2 lần dấu = 
+    </script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mặt hàng nam</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header id="header">
+        <div id="header-info">
+          <ul id="ul-info">
+            <li id="info"><a href="#">Tra cứu đơn hàng</a></li>
+            <li id="info">
+              <div>
+                <img src="img/placeholder.png" alt="" /><a
+                  href="https://goo.gl/maps/8mS87jLDFfVYjqvGA"
+                  >Tìm của hàng</a
+                >
+              </div>
+            </li>
+            <li id="info">
+              <div>
+                <img src="img/heart.png" alt="" /><a href="#">Yêu thích</a>
+              </div>
+            </li>
+            <li id="info">
+              <div>
+                <img src="img/user.png" alt="" /><a href="lg.html">Đăng nhập</a>
+              </div>
+            </li>
+            <li id="info">
+              <div>
+                <a href="cart.html"
+                  ><img src="img/basket.png" alt="" /> Giỏ hàng
+                  <span id="countCart"></span
+                ></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <nav id="navbar">
+        <div id="logo">
+          <a href="index.html"
+            ><img src="img/1234.png" alt="" width="100"
+          /></a>
+        </div>
+        <div id="list">
+          <ul id="ul-product">
+            <li id="sanpham"><a href="index.html">SẢN PHẨM</a></li>
+            <li id="sanpham"><a href="nam.html">NAM</a></li>
+            <li id="sanpham"><a href="nu.html">NỮ</a></li>
+            <li id="sanpham"><a href="saleOff.html">SALE OFF</a></li>
+          </ul>
+        </div>
+
+        <form action="">
+          <div class="group">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+            <input placeholder="Search" type="search" class="input">
+          </div>
+        </form>
+      </nav>
+
+      <div class="grid">
+        <main id="main-content"></main>
+
+      </div>
+      <div id="smooth"> <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/5082/5082996.png" alt="" ></a></div>
+      <footer id="footer">
+        <ul>
+          <li>THÔNG TIN</li>
+          <li><img src="img/1234.png" alt="" width="100" /></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul>
+          <li>HỖ TRỢ</li>
+          <li>Đạt Hàng Ngay</li>
+          <li>Thông Tin Giao Hàng</li>
+        </ul>
+        <ul>
+          <li>HƯỚNG DẪN</li>
+          <li>Tìm Kiếm</li>
+          <li>Chính Sách Bảo Mật</li>
+          <li>Điều Khoản Dịch Vụ</li>
+          <li>Chính Sách Đổi Trả</li>
+        </ul>
+        <ul>
+          <li>ĐĂNG KÍ NHẬN BẢN TIN</li>
+          <li>Để cập nhật các thông tin mới nhất từ PiNuss !</li>
+          <li><input placeholder="Enter your email" class="input1" name="email" type="email">
+            <button class="button1">Subscribe</button></li>
+        </ul>
+      </footer>
+      <div id="ft2">
+        <div id="left">© Copyright 2023 By PinuSs</div>
+        <div id="right"><img src="img/pay_copyright.png" alt="" /></div>
+      </div>
+    </div>
+    <script>
+      var products = [
+        {
+          id: "1",
+          brand: "ananas",
+          name: "Batas Workaday - High Top",
+          price: 1000000,
+          sale: 780000,
+          status: "Real Teal",
+          quantity: 1,
+        },
+
+        {
+          id: "3",
+          brand: "ananas",
+          name: "BASAS BUMPER GUM EXT",
+          price: 500000,
+          sale: "500000",
+          status: "Real Teal",
+          quantity: 1,
+        },
+        {
+          id: "4",
+          brand: "ananas",
+          name: "Dép Chấu",
+          price: 220000,
+          sale: "680000",
+          status: "Real Teal",
+          quantity: 1,
+        },
+        {
+          id: "5",
+          brand: "ananas",
+          name: "Batas Workaday - High Top",
+          price: 1000000,
+          sale: "780000",
+          status: "Real Teal",
+          quantity: 1,
+        },
+      ];
+      var sp='';
+        for(let i=0;i<products.length;i++){
+          sp+=`
+          <div id="bl">
+            <div id="block">
+              <div id="giay">
+                <img src="img/${products[i].id}.png" alt=""/>
+              </div>
+              <div id="ten_giasp">
+                ${products[i].name} <br />
+                <div id="new">${products[i].status}</div>
+                ${products[i].price} VND
+              </div>
+  
+              <button class="add-sp" onclick="addCart(${i},${products[i].id})">Thêm sản phẩm</button>
+              <a href="sp1.html?index=${i}"><button class="add">Chi Tiết</button></a>
+            </div>
+          </div>`
+        }
+        document.getElementById('main-content').innerHTML=sp;
+        var cart=[];
+        function addCart(index,id){
+          check= true;
+          if(cart.length>0){
+            for(let i=0;i<cart.length;i++){
+              if(cart[i].id==id){
+                cart[i].quantity+=1;
+                check=false;
+              }
+            }
+          }
+          if(check==true){
+            cart.push(products[index]);
+          }
+         // alert('Bạn đã chọn mua 1 sản phẩm'+products[index].name);
+         
+         document.getElementById('countCart').innerHTML=cart.length;
+          //Lưu giỏ hàng cart vào chỗ lưu trữ của trình duyệt
+          localStorage.setItem('saveCart',JSON.stringify(cart))
+        }
+    </script>
+  </body>
+</html>

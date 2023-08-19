@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sản phẩm chi tiết</title>
+    <link rel="stylesheet" href="sp1.css" />
+    
+  </head>
+  <body>
+    
+    <div id="wrapper">
+      <header id="header">
+        <div id="header-info">
+          <ul id="ul-info">
+            <li id="info"><a href="#">Tra cứu đơn hàng</a></li>
+            <li id="info">
+              <div>
+                <img src="img/placeholder.png" alt="" /><a
+                  href="https://goo.gl/maps/8mS87jLDFfVYjqvGA"
+                  >Tìm của hàng</a
+                >
+              </div>
+            </li>
+            <li id="info">
+              <div>
+                <img src="img/heart.png" alt="" /><a href="#">Yêu thích</a>
+              </div>
+            </li>
+            <li id="drop">
+              
+                <img src="img/user.png" alt="" /><a href="lg.html">Đăng nhập</a>
+                <ul>
+                  <li><a href="#" class="li">Mobile</a></li>
+                  <li><a href="#" class="li">Email</a></li>
+              </ul>
+            
+            </li>
+            <li id="info">
+              <div>
+                <a href="cart.html"
+                  ><img src="img/basket.png" alt="" /> Giỏ hàng
+                  <span id="countCart"></span
+                ></a>
+              </div>
+            </li> 
+            <li id="info">
+              <div>
+                <img src="img/user.png" alt="" /><a href="maytinh.html">Máy tính</a>
+              </div>
+            </li> 
+          </ul>
+        </div>
+      </header>
+      
+      <nav id="navbar">
+        <div id="logo">
+          <a href="index.html"
+            ><img src="/img/1234.png" alt="" width="100"
+          /></a>
+        </div>
+        <div id="list">
+          <ul id="ul-product">
+            <li id="sanpham"><a href="index.html">SẢN PHẨM</a></li>
+            <li id="sanpham"><a href="nam.html">NAM</a></li>
+            <li id="sanpham"><a href="nu.html">NỮ</a></li>
+            <li id="sanpham"><a href="saleOff.html">SALE OFF</a></li>
+          </ul>
+        </div>
+
+        <form action="">
+          <div class="group">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+            <input placeholder="Search" type="search" class="input">
+          </div>
+        </form>
+      </nav>
+
+      <div id="main-content">
+        <div id="bl">
+          <!-- <div id="block">
+            <div id="giay"><img id="ab" src="https://ananas.vn/wp-content/uploads/Pro_AV00174_1.jpeg" alt="" /></div>
+            <ul id="slide">
+              <li><img onclick="xemhinh(this)" src="img/1.png" alt=""></li>
+              <li><img onclick="document.getElementById('ab').setAttribute('src',this.src)" src="img/12.png" alt=""></li>
+              <li><img onclick="document.getElementById('ab').setAttribute('src',this.src)" src="img/13.png" alt=""></li>
+              <li><img onclick="document.getElementById('ab').setAttribute('src',this.src)" src="img/14.png" alt=""></li>
+            </ul>
+          </div> -->
+        </div>
+
+        <div id="bc">
+          <div id="ten"></div>
+          <ul id="masp">
+            <li>Mã sản phẩm: <b>AV00174</b></li>
+            <li>Tình trạng: <b>New Arrival</b></li>
+          </ul>
+          <div id="gia"></div>
+          <ul id="color">
+            <li>s</li>
+            <li>s</li>
+            <li>s</li>
+          </ul>
+          <ul class="size">
+            <li>SIZE</li>
+            <li>SỐ LƯỢNG</li>
+          </ul>
+          <select id="size">
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="audi" selected></option>
+          </select>
+          <select id="size">
+            <option value="38">1</option>
+            <option value="39">2</option>
+            <option value="40">3</option>
+            <option value="audi" selected></option>
+          </select>
+          <ul id="them">
+            <li> MUA NGAY</li>
+            <li><img src="img/heart_1.png" alt=""></li>
+          </ul>
+          <ul id="thanh" onclick="addCart()">
+           THÊM VÀO GIỎ HÀNG
+          </ul> 
+        </div>
+        
+      </div>  <!-- end div_main_content -->
+      <div id="smooth"> <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/5082/5082996.png" alt="" ></a></div>
+
+      <div id="footer">
+        <ul>
+          <li>THÔNG TIN</li>
+          <li><img src="img/Logo_Ananas_Header.svg" alt=""></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul>
+          <li>HỖ TRỢ</li>
+          <li>Đạt Hàng Ngay</li>
+          <li>Thông Tin Giao Hàng</li>
+        </ul>
+        <ul>
+          <li>HƯỚNG DẪN</li>
+          <li>Tìm Kiếm</li>
+          <li>Chính Sách Bảo Mật</li>
+          <li>Điều Khoản Dịch Vụ</li>
+          <li>Chính Sách Đổi Trả</li>
+        </ul>
+        <ul>
+          <li>ĐĂNG KÍ NHẬN BẢN TIN</li>
+          <li>Để cập nhật các thông tin mới nhất từ PiNuss !</li>
+          <li></li>
+        </ul>
+      </div>
+      <div id="ft2">
+        <div id="left">© Copyright 2023 By PinuSs</div>
+        <div id="right"><img src="img/pay_copyright.png" alt="" /></div>
+      </div>
+    </div>
+    <script>
+      var products = [
+        {
+          id: "1",
+          brand: "ananas",
+          thumbnail:["11.png","12.png","13.png","14.png",],
+          name: "Batas Workaday - High Top",
+          price: 1000000,
+          sale: 780000,
+          status: "Real Teal",
+          quantity: 1,
+        },
+
+        {
+          id: "2",
+          brand: "Bitis",
+          thumbnail:["21.png","22.png","23.png","24.png"],
+          name: "Hunter X - Dune OTP Real",
+          price: 580000,
+          sale: "580000",
+          status: "Real Teal",
+          quantity: 1,
+        },
+        {
+          id: "3",
+          brand: "ananas",
+          thumbnail:["31.png","32.png","33.png","34.png"],
+          name: "BASAS BUMPER GUM EXT",
+          price: 500000,
+          sale: "500000",
+          status: "Real Teal",
+          quantity: 1,
+        },
+        {
+          id: "4",
+          brand: "ananas",
+          thumbnail:["31.png","32.png","33.png","34.png"],
+          name: "Dép Chấu",
+          price: 220000,
+          sale: "680000",
+          status: "Real Teal",
+          quantity: 1,
+        },
+        {
+          id: "5",
+          brand: "ananas",
+          name: "Batas Workaday - High Top",
+          price: 1000000,
+          sale: "780000",
+          status: "Real Teal",
+          quantity: 1,
+        },
+        {
+          id: "6",
+          brand: "ananas",
+          name: "PATTAS POLKA DOTS - HIGH TOP - JELLY BEAN",
+          price: 720000,
+          sale: "720000",
+          status: "",
+          quantity: 1,
+        },
+        {
+          id: "7",
+          brand: "ananas",
+          name: "Batas Workaday - High Top",
+          price: 720000,
+          sale: "720000",
+          status: "Real Teal",
+          quantity: 1,
+        },
+        {
+          id: "8",
+          brand: "ananas",
+          name: "Adidas SuperStars",
+          price: 1000000,
+          sale: "1000000",
+          status: "Real Teal",
+          quantity: 1,
+        },
+      ];
+
+      var url=location.href;
+      var index=url.slice(-1);
+      var sp=
+      `
+      <div id="block">
+            <div id="giay"><img id="ab" src="img/${products[index].id}.png" alt="" /></div>
+            <ul id="slide">
+              <li><img onclick="chonAnh(0)" src="img/${products[index]['thumbnail'][0]}" width="100px"></li>
+              <li><img onclick="chonAnh(1)" src="img/${products[index]['thumbnail'][1]}" width="100px"></li>
+              <li><img onclick="chonAnh(2)" src="img/${products[index]['thumbnail'][2]}" width="100px"></li>
+              <li><img onclick="chonAnh(3)" src="img/${products[index]['thumbnail'][3]}" width="100px"></li>
+            </ul>
+          </div>
+      
+      `
+      var sp1=
+      `
+      <p>${products[index].name}</p>
+      `
+      var sp2 = `
+      <p>PRICE: ${products[index].price} VND</p>
+      `
+      var sp3=` <ul id="row_1">
+          <li>Giày</li>
+          <li>Vintas</li>
+          <li>Vintas Jazico - High Top</li>
+        </ul>`
+      
+      
+      document.getElementById('bl').innerHTML=sp;
+      document.getElementById('ten').innerHTML=sp1;
+      document.getElementById("gia").innerHTML=sp2
+      document.getElementById("row").innerHTML=sp3;
+      function chonAnh(i){
+        document.getElementById('ab').src='img/'+products[index]['thumbnail'][i];
+      }
+    </script>
+    <script>
+      var cart = [];
+
+      function addCart() {
+          check = true;
+          if (cart.length > 0) {
+              for (let i = 0; i < cart.length; i++) {
+                  //kiểm tra id trong giỏ hàng bằng với id sắp mua
+                  if (cart[i].id == products[index].id) {
+                      cart[i].quantity += 1;
+                      check = false;
+                  }
+              }
+          }
+          //kiểm tra nếu không trùng thì add sản phẩm vào giỏ
+          if (check == true) {
+              //alert('Bạn đã chọn mua 1 sản phẩm'+products[index].name);
+              cart.push(products[index]);
+
+          }
+          console.log(cart);
+
+          document.getElementById('countCart').innerHTML = cart.length;
+          //Lưu giỏ hàng cart vào chỗ lưu trữ của trình duyệt
+          localStorage.setItem('saveCart', JSON.stringify(cart))
+      }
+  </script>
+  </body>
+</html>

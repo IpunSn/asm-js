@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+
+    <div id="wrapper">
+      
+      <header id="header">
+        <div id="header-info">
+          <ul id="ul-info">
+            <li id="info"><a href="#">Tra cứu đơn hàng</a></li>
+            <li id="info">
+              <div>
+                <img src="img/placeholder.png" alt="" /><a
+                  href="https://goo.gl/maps/8mS87jLDFfVYjqvGA"
+                  >Tìm của hàng</a
+                >
+              </div>
+            </li>
+            <li id="info">
+              <div>
+                <img src="img/heart.png" alt="" /><a href="#">Yêu thích</a>
+              </div>
+            </li>
+            <li id="drop">
+              
+                <img src="img/user.png" alt="" /><a href="lg.html">Đăng nhập</a>
+                <ul>
+                  <li><a href="#" class="li">Mobile</a></li>
+                  <li><a href="#" class="li">Email</a></li>
+              </ul>
+            
+            </li>
+            <li id="info">
+              <div>
+                <a href="cart.html"
+                  ><img src="img/basket.png" alt="" /> Giỏ hàng
+                  <span id="countCart"></span
+                ></a>
+              </div>
+            </li> 
+            
+          </ul>
+        </div>
+      </header>
+      
+      <nav id="navbar">
+        <div id="logo">
+          <a href="index.html"
+            ><img src="/img/1234.png" alt="" width="100"
+          /></a>
+        </div>
+        <div id="list">
+          <ul id="ul-product">
+            <li id="sanpham"><a href="index.html">SẢN PHẨM</a></li>
+            <li id="sanpham"><a href="nam.html">NAM</a></li>
+            <li id="sanpham"><a href="nu.html">NỮ</a></li>
+            <li id="sanpham"><a href="saleOff.html">SALE OFF</a></li>
+          </ul>
+        </div>
+
+        <form action="">
+          <div class="group">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+            <input placeholder="Search" type="search" class="input">
+          </div>
+        </form>
+      </nav>
+
+      <!-- <div id="slide">FREE SHIPPING VỚI HÓA ĐƠN TỪ 800K</div>
+      <div id="banner">
+        <img src="img/LowHigh_Mobile-1500x800.jpg" alt="" />
+      </div> -->
+
+      <!-- <div id="main-content"></div> -->
+      
+      <div id="table">
+        <div id="tb_left">
+          <h4>Bag</h4>
+          <div id="tb_left_1">
+
+          </div>
+          
+        </div>
+    
+    
+        <div id="tb_right">
+          <h4>Summary</h4>
+          <div id="tb_right_info">
+          <span>Price</span> <span id="price_1"></span>
+          <div id="total">
+            <span id="total">Total</span> <span id="total_price"></span>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <ul>
+          <li>THÔNG TIN</li>
+          <li><img src="img/Logo_Ananas_Header.svg" alt=""></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul>
+          <li>HỖ TRỢ</li>
+          <li>Đạt Hàng Ngay</li>
+          <li>Thông Tin Giao Hàng</li>
+        </ul>
+        <ul>
+          <li>HƯỚNG DẪN</li>
+          <li>Tìm Kiếm</li>
+          <li>Chính Sách Bảo Mật</li>
+          <li>Điều Khoản Dịch Vụ</li>
+          <li>Chính Sách Đổi Trả</li>
+        </ul>
+        <ul>
+          <li>ĐĂNG KÍ NHẬN BẢN TIN</li>
+          <li>Để cập nhật các thông tin mới nhất từ PiNuss !</li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div id="ft2">
+        <div id="left">© Copyright 2023 By PinuSs</div>
+        <div id="right"><img src="img/pay_copyright.png" alt="" /></div>
+      </div>
+    </div>
+    <script>
+      var cart = JSON.parse(localStorage.getItem("saveCart"));
+      document.getElementById("countCart").innerHTML = cart.length;
+      var sp = "";
+      for (let i = 0; i < cart.length; i++) {
+            sp += `
+            <div id="tb_left_info">
+            <div id="img"><img src="img/${cart[i].id}.png" alt="" width="150px"></div>
+          <div id="info_sp">
+            <div id="ten">${cart[i].name}</div>
+            <div id="brand">${cart[i].price}</div>
+            <select name="" id="size">
+              <option value="">39</option>
+              <option value="">40</option>
+              <option value="">41</option>
+              <option value="">42</option>
+            </select>
+            <span>
+              <button id="btn" onclick="giam(${i})">-</button> <span>${cart[i].quantity}</span> <button id="btn" onclick="tang(${i})">+</button>
+            </span>
+            <div id="status">${cart[i].status}</div>
+            <button id="icon"><i class="fa-regular fa-heart fa-2xl"></i></button>
+            <button id="icon" onclick="deleteProduct()"><i class="fa-regular fa-trash-can fa-2xl"></i></button>
+          </div>
+          <span id="price">${cart[i].quantity * cart[i].price} VND</span> 
+        </div>
+            `
+            document.getElementById("tb_left_1").innerHTML = sp;
+          }
+          // var sp1="";
+          // for (let i = 0; i < cart.length; i++){
+          //   sp1+=
+          //   ` <span>${cart[i].price}</span>
+          //   `
+          //   document.getElementById("price_1").innerHTML=sp1;
+          // }
+  
+  
+          function tang(index){
+            cart[index].quantity+=1;
+            localStorage.setItem('saveCart',JSON.stringify(cart));
+            location.reload();
+          }
+          function giam(index){
+            cart[index].quantity-=1;
+            if(cart[index].quantity==0){
+              deleteProduct(index);
+            }
+            localStorage.setItem('saveCart',JSON.stringify(cart));
+            location.reload();
+          }
+          function totalMoney() {
+            var sum = 0;
+            for (let i = 0; i < cart.length; i++) {
+              sum += cart[i].quantity * cart[i].price ;
+            }
+            document.getElementById("total_price").innerHTML = sum;
+            document.getElementById("price_1").innerHTML=sum;
+          }
+          totalMoney();
+          function deleteProduct(index) {
+            cart.splice(index, 1);
+            localStorage.setItem("saveCart", JSON.stringify(cart));
+            location.reload();
+          }
+    </script>
+      
+    </div>
+
+  </body>
+</html>
